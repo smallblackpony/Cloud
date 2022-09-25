@@ -4,7 +4,7 @@ from collections import Counter
 import socket   
 hostname=socket.gethostname()   
 IPAddr=socket.gethostbyname(hostname)  
-path = "/home/ma/data" 
+path = "/home/data" 
 files= os.listdir(path) 
 global position  
 for file in files: 
@@ -13,10 +13,10 @@ for file in files:
         print (position) 
     
                   
-file1 = open("/home/ma/data/Limerick-3.txt", "rt")
+file1 = open("/home/data/Limerick-3.txt", "rt")
 data1 = file1.read()   
 words1 = data1.split()  
-file2 = open("/home/ma/data/IF.txt", "rt") 
+file2 = open("/home/data/IF.txt", "rt") 
 data2 = file2.read()   
 words2 = data2.split()    
 Total =  len(words1)+len(words2)
@@ -31,7 +31,7 @@ print('Top 3 words in IF:',most_occur)
 print("My IP is:"+IPAddr)   
 
 
-with open("/home/ma/output/result.txt", "w") as w:
+with open("/home/output/result.txt", "w") as w:
     for file in files:
         if file.endswith(".txt"): 
             position = path+'/'+ file 
