@@ -30,8 +30,9 @@ print('Top 3 words in IF:',most_occur)
 
 print("My IP is:"+IPAddr)   
 
-
-with open("/home/output/result.txt", "w+") as w:
+filename = "/home/output/result.txt"
+os.makedirs(os.path.dirname(filename), exist_ok=True)
+with open(filename, "w") as w:
     for file in files:
         if file.endswith(".txt"): 
             position = path+'/'+ file 
